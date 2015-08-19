@@ -253,7 +253,7 @@ $.getJSON(inputData, function() {
 
 				$('.dragDropName').droppable({
 				hoverClass: "drag-hover",
-				accept:".dragDropName",
+				accept:".dragName",
 				tolerence: 'pointer',
 
 				drop: function(event, ui) {
@@ -287,19 +287,55 @@ $.getJSON(inputData, function() {
 			});
 
 				$('.dragName').draggable({
-					 //helper: 'clone',
-					 revert: 'invalid',
+				
+				revert: 'invalid',
 
-					drag: function() {
-						//$(this).css('color', 'black').css('background-color', '#eee;').css('z-index', '5').css('box-shadow', '0px 0px 20px 5px rgba(0,0,0,0.45)').css('border-radius', '5px').css('border', '1px solid #ccc');
-						//$('.DragDrop1-mini-popup').hide('slow');
-					},
-					stop: function() {
-						$(this).css('background-color', 'white').css('box-shadow', '0px 0px 0px 0px rgba(0,0,0,0.0)').css('border-radius', '0').css('border', '0px solid #ccc').css('opacity', '1');
-						//$(this).css({opacity:0.1});						//updateTries(data.data);
-						//updateDiv()
+				start: function(event, ui) { 
+
+				},
+			
+				drag: function(event,ui){
+
+						//adapt droppable to screen size to prevent cursor moving faster
+						function startFix(event, ui) {
+							   ui.position.left = 0;
+							   ui.position.top = 0;
+							   console.log("keyrir" + zoomScale);
+
+							}
+			 
+								function dragFix(event, ui) {
+								    var changeLeft = ui.position.left - ui.originalPosition.left; // find change in left
+								    var newLeft = ui.originalPosition.left + changeLeft / zoomScale; // adjust new left by our zoomScale
+								 
+								    var changeTop = ui.position.top - ui.originalPosition.top; // find change in top
+								    var newTop = ui.originalPosition.top + changeTop / zoomScale; // adjust new top by our zoomScale
+								 
+								    ui.position.left = newLeft;
+								    ui.position.top = newTop;
+								}
+
+								$(this).draggable({
+								    start: startFix,
+								    drag: dragFix
+								});
+
+
+				$(ui.helper).css("background-color", "orange");
+					      
+					  
+
+				},
+
+
+				stop: function() {
+					//$(this).css('background-color', 'white').css('box-shadow', '0px 0px 0px 0px rgba(0,0,0,0.0)').css('border-radius', '0').css('border', '0px solid #ccc').css('opacity', '1');
+					//$(this).css({opacity:0.1});						//updateTries(data.data);
+					//updateDiv()
 
 					}
+
+
 			});
 			 
 		}
