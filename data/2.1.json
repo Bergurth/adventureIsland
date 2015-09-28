@@ -1,0 +1,124 @@
+{
+	"setting": {
+
+		"instruction": "Listen to the description of a family photo. Drag and drop the family members where they belong in the picture. Click on the boxes below. Listen to  1, 2, and 3. You can listen more than once. Drag and drop the names beneath each picture."
+		
+	},
+
+	"drag": [{
+
+		"dropName" : "name ",
+		"dropImg":"images/1_3/frog.png"
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/rabbit.png"
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/snake.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/cat.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/dog.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/parrot.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/goldfish.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+
+		"dropName" : "name ",
+		"dropImg":"images/1_3/frog.png"
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/rabbit.png"
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/snake.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/cat.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/dog.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/parrot.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/goldfish.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/cat.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/dog.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/parrot.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/goldfish.png"
+		
+	},{
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	}],
+
+	"audio": [{
+
+		"listen": "audio1",
+		"correct": "1"
+	},{
+
+		"listen": "audio2",
+		"correct": "2"
+	},{
+
+		"listen": "audio3",
+		"correct": "3"
+	}],
+
+	"backgroundImg": [{
+
+		"img": "images/2_1/appartment.png"
+	}]
+
+
+}

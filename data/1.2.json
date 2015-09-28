@@ -1,0 +1,87 @@
+{
+	"setting": {
+
+		"instruction": "Listen to what the weather will be like in the week. Drag and drop the days of the week in the right order and the picture of the weather that day and the words that describe the weather."
+		
+	},
+
+	"drag": [{
+
+		"name": "cloudy",
+		"img": "images/1_2/cloudy.png",
+		"dropName" : "weather",
+		"dropImg" : "1",
+		"dropName2":"day",
+		"name2": "Monday"
+	},{
+
+		"name": "rainy",
+		"img": "images/1_2/rainy.png",
+		"dropName" : "weather",
+		"dropImg" : "2",
+		"dropName2":"day",
+		"name2": "Tuesday"
+
+	},{
+
+		"name": "windy",
+		"img": "images//1_2/windy.png",
+		"dropName" : "weather",
+		"dropImg" : "3",
+		"dropName2":"day",
+		"name2": "Wednesday"
+		
+	},{
+
+		"name": "snowy",
+		"img": "images//1_2/snowy.png",
+		"dropName" : "weather",
+		"dropImg" : "3",
+		"dropName2":"day",
+		"name2": "Thursday"
+		
+	},{
+
+		"name": "stormy",
+		"img": "images//1_2/stormy.png",
+		"dropName" : "weather",
+		"dropImg" : "4",
+		"dropName2":"day",
+		"name2": "Friday"
+		
+	},{
+
+		"name": "sunny",
+		"img": "images//1_2/sunny.png",
+		"dropName" : "weather",
+		"dropImg" : "5",
+		"dropName2":"day",
+		"name2": "Saturday"
+		
+	},{
+
+		"name": "foggy",
+		"img": "images//1_2/foggy.png",
+		"dropName" : "weather",
+		"dropImg" : "6",
+		"dropName2":"day",
+		"name2": "Sunday"
+		
+	}],
+
+	"audio": [{
+
+		"listen": "audio1",
+		"correct": "1"
+	},{
+
+		"listen": "audio2",
+		"correct": "2"
+	},{
+
+		"listen": "audio3",
+		"correct": "3"
+	}]
+
+
+}

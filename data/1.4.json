@@ -1,0 +1,89 @@
+{
+	"setting": {
+
+		"instruction": "Listen to the description of a family photo. Drag and drop the family members where they belong in the picture. Click on the boxes below. Listen to  1, 2, and 3. You can listen more than once. Drag and drop the names beneath each picture."
+		
+	},
+
+	"drag": [{
+
+		"img": "images/1_4/handball.png",
+		"dropName" : "name ",
+		"dropImg":"images/1_3/frog.png"
+	},{
+		
+		"img": "images/1_4/skating.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/rabbit.png"
+	},{
+		
+		"img": "images/1_4/football.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/snake.png"
+		
+	},{
+
+		"img": "images/1_4/swimming.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/cat.png"
+		
+	},{
+
+		"img": "images/1_4/tennis.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/dog.png"
+		
+	},{
+		
+		"img": "images/1_4/gymnasticks.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/parrot.png"
+		
+	},{
+
+		"img": "images/1_4/karate.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/mouse.png"
+		
+	},{
+
+		"img": "images/1_4/skiing.png",
+		"dropName" : "name",
+		"dropImg" : "images/1_3/goldfish.png"
+		
+	}],
+
+	"characters": [{
+
+		"person": "images/1_4/brother.png",
+		"correct": "1"
+	},{
+
+		"person": "images/1_4/sister.png",
+		"correct": "2"
+	},{
+
+		"person": "images/1_4/mother.png",
+		"correct": "3"
+	},
+	{
+
+		"person": "images/1_4/father.png",
+		"correct": "4"
+	}],
+
+	"audio": [{
+
+		"listen": "audio1",
+		"correct": "1"
+	}],
+
+	"dragMe": [{
+
+		"img": "images/1_4/volleyball.png",
+		"name": "name"
+		
+	}]
+
+
+}

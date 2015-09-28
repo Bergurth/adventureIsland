@@ -7,64 +7,64 @@
 
 	"drag": [{
 
-		"name": "Tom",
+		"name": "7 &#163;  ",
 		"img": "images/tom.png",
 		"dropName" : "name ",
-		"dropImg" : "1"
+		"dropImg":"images/1_3/frog.png"
 	},{
 
-		"name": "Jane",
+		"name": "5 &#163;",
 		"img": "images/jane.png",
 		"dropName" : "name",
-		"dropImg" : "2"
+		"dropImg" : "images/1_3/rabbit.png"
 	},{
 
-		"name": "Bob",
+		"name": "10 &#163;",
 		"img": "images/bob.png",
 		"dropName" : "name",
-		"dropImg" : "3"
+		"dropImg" : "images/1_3/snake.png"
 		
 	},{
 
-		"name": "June",
+		"name": "13 &#163;",
 		"img": "images/june.png",
 		"dropName" : "name",
-		"dropImg" : "3"
+		"dropImg" : "images/1_3/cat.png"
 		
 	},{
 
-		"name": "Judy",
+		"name": "20 &#163;",
 		"img": "images/judy.png",
 		"dropName" : "name",
-		"dropImg" : "4"
+		"dropImg" : "images/1_3/dog.png"
 		
 	},{
 
-		"name": "Aunty Jay",
+		"name": "36 &#163;",
 		"img": "images/aunt.png",
 		"dropName" : "name",
-		"dropImg" : "5"
+		"dropImg" : "images/1_3/parrot.png"
 		
 	},{
 
-		"name": "Mary",
+		"name": "8 &#163;",
 		"img": "images/mary.png",
 		"dropName" : "name",
-		"dropImg" : "6"
+		"dropImg" : "images/1_3/mouse.png"
 		
 	},{
 
-		"name": "Paul",
+		"name": "1 &#163;",
 		"img": "images/paul.png",
 		"dropName" : "name",
-		"dropImg" : "7"
+		"dropImg" : "images/1_3/goldfish.png"
 		
 	},{
 
-		"name": "Jason",
+		"name": "3 &#163;",
 		"img": "images/jason.png",
 		"dropName" : "name",
-		"dropImg" : "8"
+		"dropImg" : "images/1_3/mouse.png"
 		
 	}],
 

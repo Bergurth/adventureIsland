@@ -1,0 +1,314 @@
+/*dragdrop1*/
+.dragDropName {
+  position:  absolute;
+  padding:0.5em;
+  margin-top: 150px;
+  margin-left:-0.5em;
+  width:150px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragDropImg {
+  position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  margin-bottom: 3em;
+  width:153px;
+  height:180px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragName {
+   position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+.dragImg {
+  position:relative;
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+/*dragdrop2*/
+
+.dragDropName1_2_ {
+  position:  absolute;
+  padding:0.5em;
+  margin-top: 87px;
+  margin-left:-0.5em;
+  width:120px;
+  border:dashed 1px #e18728 ;
+}
+.dragDropName1_22_ {
+  position:  absolute;
+  padding:0.5em;
+  margin-top: -95px;
+  margin-left:-0.5em;
+  width:120px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragDropImg1_2_ {
+  position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  margin-bottom: 4.5em;
+  margin-top: 3.5em;
+  width:120px;
+  height:120px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragName1_2_ {
+   position:relative;
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:120px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+.dragName1_22_ {
+   position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:120px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+
+.dragImg1_2_ {
+  position:relative;
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  margin:0.5em;
+  width:122px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+/*dragdrop3*/
+.dragDropName1_3_ {
+  position:  absolute;
+  padding:0.5em;
+  margin-top: 60px;
+  margin-left:-0.5em;
+  width:150px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragDropImg1_3_ {
+  position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  margin-bottom: 3em;
+  width:153px;
+  height:180px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragName1_3_ {
+   position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+.dragImg1_3_ {
+  position:relative;
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+/*dragdrop4*/
+.dragDropName1_4_ {
+  position:  absolute;
+  padding:0.5em;
+  margin-top: 60px;
+  margin-left:-0.5em;
+  width:150px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragDropImg1_4_ {
+  position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  top:65px;
+  padding:0.5em;
+  margin:0.5em;
+  margin-top: 25px;
+  width:140px;
+  height:140px;
+  border:dashed 1px #e18728 ;
+}
+
+.dragName1_4_ {
+   position:relative;
+ display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+.dragImg1_4_ {
+  position:relative;
+  display: inline-block;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  vertical-align: top;
+  padding:0.5em;
+  margin:0.5em;
+  width:150px;
+  border:solid 1px #e18728 ;
+  background-color: #fff;
+}
+
+#assignment1_1{
+position:absolute;
+width: 100px;
+min-height: 100px;
+border:solid 2px #ccc;
+margin-left: 200px;
+margin-top: 150px;
+background-color: #ffa500;
+padding:1em;
+}
+
+#assignment1_2{
+position:absolute;
+width: 100px;
+min-height: 100px;
+border:solid 2px #ccc;
+margin-left: 500px;
+margin-top: 150px;
+background-color: #ffa500;
+padding:1em;
+}
+
+#assignment1_3{
+position:absolute;
+width: 100px;
+min-height: 100px;
+border:solid 2px #ccc;
+margin-left: 900px;
+margin-top: 150px;
+background-color: #ffa500;
+padding:1em;
+}
+
+#assignment1_4{
+position:absolute;
+width: 100px;
+min-height: 100px;
+border:solid 2px #ccc;
+margin-left: 500px;
+margin-top: 350px;
+background-color: #ffa500;
+padding:1em;
+}
+
+.can {
+  position: absolute;
+  opacity:    1;
+  background: #fff; 
+  width:      35%;
+  height:6%;
+  z-index:    11;
+  padding:0.5em;
+  top:        10px; 
+  left:       58px; 
+  text-align: center;
+  font-size: 20px;
+  border:solid 3px #e18728 ;
+}
+
+
+.cant {
+  position: absolute;
+  opacity:    1;
+  background: #fff; 
+  width:      35%;
+  height:6%;
+  z-index:    11;
+  padding:0.5em;
+  top:        10px; 
+  left:       218px; 
+  text-align: center;
+  font-size: 20px;
+  border:solid 3px #e18728 ;
+}
+
+
+.iCan {
+  position: absolute;
+  opacity:    1;
+  background: #fff; 
+  width:      69%;
+  height:6%;
+  z-index:    11;
+  padding:0.5em;
+  top:        10px; 
+  left:       33px; 
+  text-align: center;
+  font-size: 20px;
+  border:solid 3px #e18728 ;
+}

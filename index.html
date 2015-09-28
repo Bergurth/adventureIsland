@@ -10,122 +10,95 @@
     <title>Enskuvefur</title>
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link href="saveGame/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
     <script src="js/shuffle.js"></script>
     <script src="js/jquery.bpopup.min.js"></script>
     <script src="js/jquery.colorbox-min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
     <script src="js/dragdrop1.js"></script>
-    <script src="js/dragdrop2.js"></script>
-    <script src="js/dragdrop3.js"></script>
-    <script src="js/dragdrop4.js"></script>
-    <script src="js/dragdrop5.js"></script>
-    <script src="js/dragdrop6.js"></script>
-    <script src="js/clickable1.js"></script>
-    <script src="js/dropdown1.js"></script>
-    <script src="js/dropdown2.js"></script>
-    <script src="js/dropdown3.js"></script>
-    <script src="js/dropdown4.js"></script>
-    <script src="js/dropdown5.js"></script>
-    <script src="js/input1.js"></script>
-    <script src="js/input2.js"></script>
-    <script src="js/input3.js"></script>
-    <script src="js/input4.js"></script>
-    <script src="js/input5.js"></script>
-    <script src="js/input6.js"></script>
-    <script src="js/input7.js"></script>
     <script src="js/script.js"></script>
     <script src="js/soundjs.js"></script>
     <script src="js/gameSound.js"></script>
+
+    <!-- for saveGame -->
+    <script type="text/javascript" src="saveGame/js/jquery.min.js"></script>
+    <script type="text/javascript" src="saveGame/js/jquery.hotkeys.js"></script>
+    <script type="text/javascript" src="saveGame/js/key_status.js"></script>
+    <script type="text/javascript" src="saveGame/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="saveGame/js/settings.js"></script>
+    <script src="saveGame/js/underscore-min.js"></script>
+
+
+     <!-- for saveGame -->
+
+
     
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
 
 </head>
 
 <body>
 
+  
+
+    
+
+
 
 <div id="wrapper" class="wrapper">
 
+ <header class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand mg-brand" href="/">SgClientTest</a>
+        </div>
+        <div class="collapse navbar-collapse" role="navigation">
+          <div class="auth-group pull-right">
 
-        <nav class="navbar navbar-default navbar-inverse" role="navigation">
-          <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">Unexpected Journey</a>
+              <button id="login-button" data-toggle="modal" data-target="#auth-form-modal" class="btn btn-danger btn-login">
+                Login<span class="glyphicon glyphicon-user"></span>
+              </button>
+
+              <div class="btn-group">
+                <button  class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span>
+                <span id="username-button"></span>
+                  <span class="caret"></span>
+                </button>
+                <ul class="navbar-right dropdown-menu">
+
+                    <li class="divider"></li>
+                    <li><a id="logout_link" href="http://localhost:12315/auth/logout" class="btn-logout">Logout</a></li>
+                </ul>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class=" navbar-collapse collapse" id="bs-example-navbar-collapse-1">
-              
-              <ul class="nav navbar-nav">
-                <!-- <li class="active"><a href="#"></a></li>
-                <li><a href="#"></a></li> -->
-                
-              </ul>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Árangur">
-                   <input type="text" class="form-control" placeholder="Progress">
-
-                </div>
-               <!--  <button type="submit" class="btn btn-default">Submit</button> -->
-              </form>
-              <ul class="nav navbar-nav navbar-right">
-                <li><p class="navbar-text"></p></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Innskráning</b> <span class="caret"></span></a>
-                    <ul id="login-dp" class="dropdown-menu">
-                        <li>
-                             <div class="row">
-                                    <div class="col-md-12">
-                                        Login via
-                                        <div class="social-buttons">
-                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-                                            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-                                        </div>
-                                        or
-                                         <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-                                                <div class="form-group">
-                                                     <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
-                                                </div>
-                                                <div class="form-group">
-                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
-                                                     <div class="help-block text-right"><a href="">Forget the password ?</a></div>
-                                                </div>
-                                                <div class="form-group">
-                                                     <button type="submit" class="btn btn-primary btn-block">Sign in</button>
-                                                </div>
-                                                <div class="checkbox">
-                                                     <label>
-                                                     <input type="checkbox"> keep me logged-in
-                                                     </label>
-                                                </div>
-                                         </form>
-                                    </div>
-                                    <div class="bottom text-center">
-                                        New here ? <a href="#"><b>Join Us</b></a>
-                                    </div>
-                             </div>
-                        </li>
-                    </ul>
-                </li>
-              </ul>
-            </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
+        </div>
+                          <ul class="nav navbar-nav">
+                              <li>
+                              </li>
+                              <li class="divider-vertical"></li>
+                              <li><a id="banner-update-link"href="javascript:;">Update Game State</a></li>
+                              <li><a id="banner-ugame-link"href="javascript:;">Get Game State by username</a></li>
+                              <li><a id="user-info-link" href="" target="_blank">Get Current User Info</a></li>
+                              <li><a id="user-index-link" href="" target="_blank">Dev User Index</a></li>
+                          </ul>
+        </div>
+      </div>
+      </div>
+    </header>
 
 
 
@@ -146,6 +119,183 @@
             </div>
 
         </div>
+
+        <div id="auth-form-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+       <form class='auth-form'>
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="signin-ctrls">Login</h3>
+        </div>
+          <div class="modal-body">
+            <div class="update-ctrls">
+                  <div class="server-message">
+                      <p><strong></strong></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Username</label>
+                      <div class="controls">
+                          <input name="username" type="text"/>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">gamename</label>
+                      <div class="controls">
+                          <input name="gamename" type="text"/>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">newstate</label>
+                      <div class="controls">
+                          <input name="newstate" type="text"/>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="get-ugames-ctrls">
+                  <div class="server-message">
+                      <p><strong></strong></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Username</label>
+                      <div class="controls">
+                          <input id="ugames-uname"name="username" type="text"/>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="signin-ctrls">
+                  <div class="server-message">
+                      <p><strong></strong></p>
+                  </div>
+
+
+
+                  <div class="form-group">
+                      <label class="control-label">Username</label>
+                      <div class="controls">
+                          <input name="username" type="text"/>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Password</label>
+                      <div class="controls">
+                          <input name="password" type="password"/>
+                      </div>
+                  </div>
+              </div>
+              <div class="signup-ctrls">
+
+                <div class="server-message">
+                      <p><strong></strong></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">E-Mail</label>
+                      <div class="controls">
+                          <input name="email" type="text"/>
+                          <span class="help-block"></span>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Username</label>
+                      <div class="controls">
+                          <input name="username" type="text"/>
+                          <span class="help-block"></span>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Password</label>
+                      <div class="controls">
+                          <input name="password1" type="password"/>
+                          <span class="help-block"></span>
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">Confirm Password</label>
+                      <div class="controls">
+                          <input name="password2" type="password"/>
+                          <span class="help-block"></span>
+                      </div>
+                  </div>
+              </div>
+              <div class="password-reset-ctrls">
+
+                  <div id="password-reset-loader" style="display:none">
+                      <img src="img/large-ajax-loader.gif"/>
+                  </div>
+
+                  <div class="server-message">
+                      <p><strong></strong></p>
+                  </div>
+
+                  <div class="form-group">
+                      <label class="control-label">E-Mail</label>
+                      <div class="controls">
+                          <input name="email" type="text"/>
+                          <span class="help-block"></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <span class="signin-ctrls">
+                  <a id="password-reset-link" href="javascript:;">
+                      Forgot password
+                  </a>
+                  &nbsp; | &nbsp;
+              </span>
+              <a id="signup-link" class="signin-ctrls" href="javascript:;">
+                  Sign up as new user
+              </a>
+                    &nbsp; | &nbsp;
+              <a id="update-link" class="signin-ctrls" href="javascript:;">
+                  Update a User Game
+              </a>
+
+
+              <input id="signin-submit" class="btn btn-success signin-ctrls" type="submit"
+                     value="Login"/>
+
+
+
+
+              <a id="signin-link" class="signup-ctrls" href="javascript:;">
+                  Login as registered user
+              </a>
+              <input id="signup-submit" class="btn btn-success signup-ctrls" type="submit"
+                     value="Sign Up"/>
+
+              <a id="cancel-reset-link" class="password-reset-ctrls update-ctrls" href="javascript:;">
+                  Login as registered user
+              </a>
+              <input id="update-submit" class="btn btn-success update-ctrls" type="submit"
+                     value="Update"/>
+
+              <input id="password-reset-submit" class="btn btn-success password-reset-ctrls" type="submit"
+                     value="Reset Password"/>
+
+            <input id="ugame-submit" class="btn btn-success get-ugames-ctrls" type="submit"
+                     value="Sign Up"/>
+
+          </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+
+<script src="saveGame/js/user-login3.js"></script>
 
 </div>
 
