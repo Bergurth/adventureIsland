@@ -356,6 +356,7 @@ $.getJSON(inputData, function() {
 		function checkScore() {
 			//$('.showRightAnswers').addClass('Right');
 			//$('.showWrongAnswers').addClass('Wrong');
+			console.log("checkScore hittin");
 
 		}
 
@@ -383,6 +384,13 @@ $.getJSON(inputData, function() {
 		//$('.DragDrop1-draggable-list').draggable('disable');
 		
 		result = Math.round(((count / totalAnswers) * 100) * 10) / 20;
+		console.log(result);
+		// saekja hjer allan project 1 streng og baeta inn i rjettan stad.
+		var text = '{"1.1": '+
+					String(result)+					
+					'}';
+		var jsn1 = JSON.parse(text);
+		sg_game.save_state(jsn1,sg_game.gamename);
 		//checkScore();
 		//calculateScore();
 
