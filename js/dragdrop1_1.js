@@ -386,15 +386,42 @@ $.getJSON(inputData, function() {
 		result = Math.round(((count / totalAnswers) * 100) * 10) / 20;
 		console.log(result);
 
-
+		/*
+			saveIfBigger1_1 er baett inni, load_state fuctionid
+			sem callback, th.s. thad function er async og ekki
+			er haegt ad fa bara beint result ur thvi og vinna ut 
+			fra resultinu
+		*/
 		function saveIfBigger1_1(load_result){
 			if (load_result["1.1"] < result){
 				// todo add load results for other sub-projects, 1.2 ect.
+				
+				//puts in zero score if score undefined for that sub-project 
+				var lr_1_2 = typeof load_result["1.2"] !== 'undefined' ? load_result["1.2"] : 0;
+				var lr_1_3 = typeof load_result["1.3"] !== 'undefined' ? load_result["1.3"] : 0;
+				var lr_1_4 = typeof load_result["1.4"] !== 'undefined' ? load_result["1.4"] : 0;
+
 				var text = '{"1.1": '+
-							String(result)+					
+							String(result)+','+
+							'"1.2": '+
+							lr_1_2+','+
+							'"1.3": '+
+							lr_1_3+','+
+							'"1.4": '+
+							lr_1_4+
+
+
+
 							'}';
+							
+				/*
+				var text = '{"1.1": '+
+							String(result)+
+							'}';
+							*/
 				var jsn1 = JSON.parse(text);
 				sg_game.save_state(jsn1,sg_game.gamename);
+				
 			}
 		}
 
