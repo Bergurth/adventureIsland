@@ -1,10 +1,12 @@
  var sg_game = (function () {
 
     var gamename;
+    var state;
 
 function initSgContext(gamename) {
 
     sg_game.gamename = gamename;
+    //sg_game.load_state(sg_game.gamename);
 
 }
 
@@ -44,10 +46,11 @@ function initSgContext(gamename) {
         }
     }
 
-     function load_state() {
+     function load_state(gamename, callbackFunc) {
+
+        callbackFunc = typeof callbackFunc !== 'undefined' ? callbackFunc : function donothing(){}; 
+
         console.log("load state hittin");
-        alive = false;
-        clearInterval(timeout);
         if (currentUname.length >= 1){
         uget_url = server_url+"/user/?username="+currentUname;
 
@@ -59,7 +62,7 @@ function initSgContext(gamename) {
                     withCredentials: true
                 },
 
-                //headers:{"Origin" : "chrome-extention://mkhojklkhkdaghjjfdnphfphiaiohkef"},
+
                 success: function(data){
 
                     data2 = data.substr(1, data.length - 2);
@@ -67,45 +70,25 @@ function initSgContext(gamename) {
                     obj = JSON.parse(data2);
 
                     // trying to put in the new state, --- not quite working yet..
-                    game_state_json = obj.savedGames.gol.state;
+                    //console.log(sg_game.gamename);
+
+                    //game_state_json = obj.savedGames.adv_island_prj1.state;
+                    //game_state_json = obj.savedGames[sg_game.gamename].state;
+                    game_state_json = obj.savedGames[gamename].state;
                     var state = JSON.parse(game_state_json);
-                    console.log(state);
-
-                    graphics.initCanvas(graphics.canvasSelector);
-                    life.xCells = Math.floor((graphics.canvas.width - 1) / graphics.cellSize);
-                    life.yCells = Math.floor((graphics.canvas.height - 1) / graphics.cellSize);
-                    graphics.ctx.fillStyle = graphics.offColour;
-                    graphics.ctx.fillRect(0, 0, life.xCells * graphics.cellSize, life.yCells * graphics.cellSize);
-
-                    for (x = 0; x < life.xCells; x++) {
-                        life.prev[x] = state[x];
-                        life.next[x] = [];
-                        graphics.ctx.fillRect(x * graphics.cellSize, 0, 1, life.yCells * graphics.cellSize);
-                        for (y = 0; y < life.yCells; y++) {
-                            life.prev[x][y] = state[x][y];
-                        }
-                    }
-                    graphics.ctx.fillRect(life.xCells * graphics.cellSize, 0, 1, life.yCells * graphics.cellSize);
-                    for (y = 0; y < life.yCells; y++) {
-                        graphics.ctx.fillRect(0, y * graphics.cellSize, life.xCells * graphics.cellSize, 1);
-                    }
-                    graphics.ctx.fillRect(0, life.yCells * graphics.cellSize, life.xCells * graphics.cellSize, 1);
-                    /*
-                    $(graphics.canvasSelector).mousedown(graphics.handleMouse);
                     
-                    $('body').mouseup(function (e) {
-                        $(graphics.canvasSelector).unbind('mousemove');
-                    });
-                    */
-                    graphics.paint();
+                    sg_game.state = state;
+                    console.log(sg_game.state["1.1"]);
 
-                    //life.initUniverse(graphics.canvasSelector);
-                    //life.prev = arr;
+          
                     console.log("device control succeeded");
+                    callbackFunc(sg_game.state["1.1"]);
+
                 },
                 error: function(){
                 //console.log(data);
                     console.log("Device control failed");
+                    
                 },
             });
 

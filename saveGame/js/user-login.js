@@ -23,7 +23,8 @@
 
 
 
-     var currentUname = "";
+     //var currentUname = "";
+     var currentUname;
 
    
   

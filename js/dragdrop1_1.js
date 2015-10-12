@@ -385,12 +385,27 @@ $.getJSON(inputData, function() {
 		
 		result = Math.round(((count / totalAnswers) * 100) * 10) / 20;
 		console.log(result);
-		// saekja hjer allan project 1 streng og baeta inn i rjettan stad.
-		var text = '{"1.1": '+
-					String(result)+					
-					'}';
-		var jsn1 = JSON.parse(text);
-		sg_game.save_state(jsn1,sg_game.gamename);
+
+
+		function saveIfBigger(load_result){
+			if (load_result < result){
+
+				var text = '{"1.1": '+
+							String(result)+					
+							'}';
+				var jsn1 = JSON.parse(text);
+				sg_game.save_state(jsn1,sg_game.gamename);
+			}
+		}
+
+
+		sg_game.load_state(sg_game.gamename, saveIfBigger);
+		console.log("state comming!");
+		//console.log(load_result);
+		// saekja hjer allan project 1 streng usersins og baeta result inn a rjettan stad.
+
+
+		//console.log(load_result);
 		//checkScore();
 		//calculateScore();
 
