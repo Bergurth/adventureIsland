@@ -82,7 +82,7 @@ function initSgContext(gamename) {
 
           
                     console.log("device control succeeded");
-                    callbackFunc(sg_game.state["1.1"]);
+                    callbackFunc(sg_game.state);
 
                 },
                 error: function(){

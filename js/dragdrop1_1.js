@@ -387,9 +387,9 @@ $.getJSON(inputData, function() {
 		console.log(result);
 
 
-		function saveIfBigger(load_result){
-			if (load_result < result){
-
+		function saveIfBigger1_1(load_result){
+			if (load_result["1.1"] < result){
+				// todo add load results for other sub-projects, 1.2 ect.
 				var text = '{"1.1": '+
 							String(result)+					
 							'}';
@@ -399,7 +399,7 @@ $.getJSON(inputData, function() {
 		}
 
 
-		sg_game.load_state(sg_game.gamename, saveIfBigger);
+		sg_game.load_state(sg_game.gamename, saveIfBigger1_1);
 		console.log("state comming!");
 		//console.log(load_result);
 		// saekja hjer allan project 1 streng usersins og baeta result inn a rjettan stad.
