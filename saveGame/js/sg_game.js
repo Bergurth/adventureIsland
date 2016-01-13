@@ -70,14 +70,24 @@ function initSgContext(gamename) {
                     obj = JSON.parse(data2);
 
                     // trying to put in the new state, --- not quite working yet..
-                    //console.log(sg_game.gamename);
 
                     //game_state_json = obj.savedGames.adv_island_prj1.state;
                     //game_state_json = obj.savedGames[sg_game.gamename].state;
-                    game_state_json = obj.savedGames[gamename].state;
-                    var state = JSON.parse(game_state_json);
+                    if (typeof obj.savedGames != 'undefined'){
+                         game_state_json = obj.savedGames[sg_game.gamename].state;
+                        var state = JSON.parse(game_state_json);
                     
-                    sg_game.state = state;
+                        sg_game.state = state;
+                    }
+                    else
+                    {
+                        game_state_json = "{}";
+                        var state = JSON.parse(game_state_json);
+                    
+                        sg_game.state = state;
+
+                    }
+                   
                     console.log(sg_game.state["1.1"]);
 
           

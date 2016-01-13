@@ -393,7 +393,7 @@ $.getJSON(inputData, function() {
 			fra resultinu
 		*/
 		function saveIfBigger1_1(load_result){
-			if (load_result["1.1"] < result){
+			if (typeof load_result["1.1"] !== 'undefined' ? load_result["1.1"] : 0 < result){
 				// todo add load results for other sub-projects, 1.2 ect.
 				
 				//puts in zero score if score undefined for that sub-project 
@@ -427,6 +427,8 @@ $.getJSON(inputData, function() {
 
 
 		sg_game.load_state(sg_game.gamename, saveIfBigger1_1);
+		//'adv_island_prj1'
+		//sg_game.load_state('adv_island_prj1', saveIfBigger1_1);
 		console.log("state comming!");
 		//console.log(load_result);
 		// saekja hjer allan project 1 streng usersins og baeta result inn a rjettan stad.
